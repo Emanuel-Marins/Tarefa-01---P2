@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Conexão Cidadã</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+        <img src="https://media.discordapp.net/attachments/785623564690259968/1493988202220879872/conexaocidadanobg.png?ex=69e0f870&is=69dfa6f0&hm=0b791dd927464cf101ebb1cff630a538ff5e6f431e7ca669d7d8e13f1de979b6&=&format=webp&quality=lossless" alt="Conexão Cidadã" class="logo-img">
+    </a>
+    <div class="nav-links">
+        <a href="login.html" class="nav-links btn-outline">Já tenho conta</a>
+    </div>
+  </nav>
+
+  <div class="register-container">
+    <div class="register-card">
+      <div class="register-header">
+        <h2>Criar conta</h2>
+        <p>Junte-se a nós e comece a impactar o mundo.</p>
+      </div>
+      
+      <form id="form-cadastro">
+        <div class="input-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" placeholder="Como quer ser chamado?" required>
+        </div>
+
+        <div class="input-group">
+          <label for="tipo">Eu sou...</label>
+          <select id="tipo">
+            <option value="voluntario">Um Voluntário</option>
+            <option value="ong">Uma ONG</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Criar Senha</label>
+          <input type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+        </div>
+        
+        <button type="submit" class="btn-register">Finalizar Cadastro</button>
+      </form>
+      
+      <div class="register-footer">
+        Já possui uma conta? <a href="login.html">Fazer Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      // Pega os dados digitados
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('password').value;
+      
+      // Salva no LocalStorage
+      localStorage.setItem('nomeUsuario', nome);
+      localStorage.setItem('emailUsuario', email);
+      localStorage.setItem('senhaUsuario', senha);
+      localStorage.setItem('conectado', 'sim');
+      
+      alert('Cadastro realizado com sucesso! Bem-vindo(a) ao Conexão Cidadã.');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

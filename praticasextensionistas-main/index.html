@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conexão Cidadã</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-container">
+    <img src="https://media.discordapp.net/attachments/785623564690259968/1493988202220879872/conexaocidadanobg.png?ex=69e0f870&is=69dfa6f0&hm=0b791dd927464cf101ebb1cff630a538ff5e6f431e7ca669d7d8e13f1de979b6&=&format=webp&quality=lossless" alt="Conexão Cidadã" class="logo-img">
+  </a>
+  <div class="nav-links" id="nav-actions">
+    <a href="login.html" class="nav-links btn-outline">Entrar</a>
+    <a href="cadastro.html" class="nav-links btn-filled">Cadastrar</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Conecte-se a causas<br><span>que transformam vidas</span></h1>
+  <p>Encontre ONGs do Brasil inteiro e faça a diferença como voluntário. Juntos, derrubamos os muros entre quem quer ajudar e quem precisa de apoio.</p>
+  <div class="hero-btns">
+    <a href="#ongs" class="btn-hero-primary">Explorar ONGs</a>
+    <a href="#como" class="btn-hero-secondary">Como funciona</a>
+  </div>
+</div>
+
+<div class="search-bar">
+  <div class="search-wrap">
+    <input type="text" placeholder="Buscar ONGs por nome, causa ou cidade…" />
+    <button>&#128269;</button>
+  </div>
+</div>
+
+<div class="filters">
+  <button class="filter-chip active" data-filter="Todas">Todas</button>
+  <button class="filter-chip" data-filter="Meio Ambiente">Meio Ambiente</button>
+  <button class="filter-chip" data-filter="Animais">Animais</button>
+  <button class="filter-chip" data-filter="Educação">Educação</button>
+  <button class="filter-chip" data-filter="Saúde">Saúde</button>
+  <button class="filter-chip" data-filter="Social">Social</button>
+  <button class="filter-chip" data-filter="Cultura">Cultura</button>
+</div>
+
+<section class="ongs" id="ongs">
+  <h2 class="section-title">ONGs em destaque</h2>
+  <div class="ong-grid">
+
+    <div class="ong-card" data-category="Social">
+      <div class="card-header">
+        <div class="card-avatar av-blue">AA</div>
+        <div>
+          <div class="card-title">ActionAid</div>
+          <div class="card-location">📍 São Paulo, SP</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Combate à pobreza e defesa dos direitos humanos, com foco em comunidades vulneráveis e igualdade de gênero.</p>
+        <div class="tags">
+          <span class="tag tag-blue">Social</span>
+          <span class="tag tag-green">Educação</span>
+          <span class="tag tag-amber">Direitos Humanos</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+    <div class="ong-card" data-category="Meio Ambiente">
+      <div class="card-header">
+        <div class="card-avatar av-green">SMA</div>
+        <div>
+          <div class="card-title">SOS Mata Atlântica</div>
+          <div class="card-location">📍 São Paulo, SP</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Proteção e recuperação da Mata Atlântica por meio de educação ambiental, monitoramento e projetos de reflorestamento.</p>
+        <div class="tags">
+          <span class="tag tag-green">Meio Ambiente</span>
+          <span class="tag tag-blue">Conservação</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+    <div class="ong-card" data-category="Animais">
+      <div class="card-header">
+        <div class="card-avatar av-amber">CSD</div>
+        <div>
+          <div class="card-title">Cão Sem Dono</div>
+          <div class="card-location">📍 Rio de Janeiro, RJ</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Resgate, reabilitação e adoção responsável de animais abandonados em situação de risco nas ruas do Rio de Janeiro.</p>
+        <div class="tags">
+          <span class="tag tag-amber">Animais</span>
+          <span class="tag tag-red">Resgate</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+    <div class="ong-card" data-category="Social">
+      <div class="card-header">
+        <div class="card-avatar av-purple">IE</div>
+        <div>
+          <div class="card-title">Instituto Ethos</div>
+          <div class="card-location">📍 São Paulo, SP</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Promove a responsabilidade social empresarial e o desenvolvimento sustentável em parceria com empresas brasileiras.</p>
+        <div class="tags">
+          <span class="tag tag-purple">Sustentabilidade</span>
+          <span class="tag tag-blue">Social</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+    <div class="ong-card" data-category="Saúde">
+      <div class="card-header">
+        <div class="card-avatar av-coral">MSF</div>
+        <div>
+          <div class="card-title">Médicos Sem Fronteiras</div>
+          <div class="card-location">📍 Nacional</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Assistência médica humanitária independente a populações em crise, conflitos armados e desastres naturais.</p>
+        <div class="tags">
+          <span class="tag tag-red">Saúde</span>
+          <span class="tag tag-blue">Humanitário</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+    <div class="ong-card" data-category="Meio Ambiente">
+      <div class="card-header">
+        <div class="card-avatar av-green">GP</div>
+        <div>
+          <div class="card-title">Greenpeace Brasil</div>
+          <div class="card-location">📍 São Paulo, SP</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Campanhas de impacto pela proteção da Amazônia, mares e clima, através de ativismo, ciência e pressão política.</p>
+        <div class="tags">
+          <span class="tag tag-green">Meio Ambiente</span>
+          <span class="tag tag-green">Clima</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn-inscricao">Inscrever-se</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="como" id="como">
+  <h2>Como funciona</h2>
+  <p>Em três passos simples você já está ajudando uma causa.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Crie sua conta</div>
+      <div class="step-desc">Cadastre-se gratuitamente e monte seu perfil de voluntário.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Explore as ONGs</div>
+      <div class="step-desc">Filtre por causa, estado ou habilidade e encontre a que combina com você.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Inscreva-se</div>
+      <div class="step-desc">Clique em inscrever-se e aguarde o contato da ONG para começar.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Conexão Cidadã — Feito com ❤️ para conectar pessoas a causas que importam.
+</footer>
+
+<script>
+  // PASSO 3: JavaScript de filtragem funcional
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const ongCards = document.querySelectorAll('.ong-card');
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      // Estilo visual dos botões
+      filterChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      // Lógica de filtragem
+      const filterValue = chip.getAttribute('data-filter');
+
+      ongCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (filterValue === 'Todas' || filterValue === cardCategory) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Lógica de Navbar (Nome e Logout) e Trava de Inscrição
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.getElementById('nav-actions');
+    const usuarioLogado = localStorage.getItem('conectado');
+    const nomeUsuario = localStorage.getItem('nomeUsuario');
+
+    if (usuarioLogado === 'sim') {
+      navLinks.innerHTML = `
+        <span style="color: #fff; font-weight: 600; font-size: 0.95rem; margin-right: 15px;">
+          Olá, ${nomeUsuario}
+        </span>
+        <a href="#" id="btn-sair" class="nav-links btn-outline">Sair</a>
+      `;
+
+      document.getElementById('btn-sair').addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem('conectado', 'nao');
+        window.location.reload();
+      });
+    }
+
+    document.querySelectorAll('.btn-inscricao').forEach(btn => {
+      btn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        if (localStorage.getItem('conectado') === 'sim') {
+          window.location.href = btn.getAttribute('href');
+        } else {
+          alert('Você precisa estar logado para se inscrever em uma ONG.');
+          window.location.href = 'login.html';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

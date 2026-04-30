@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscrição - ActionAid | Conexão Cidadã</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+   <a href="index.html" class="logo-container">
+    <img src="https://media.discordapp.net/attachments/785623564690259968/1493988202220879872/conexaocidadanobg.png?ex=69e0f870&is=69dfa6f0&hm=0b791dd927464cf101ebb1cff630a538ff5e6f431e7ca669d7d8e13f1de979b6&=&format=webp&quality=lossless" alt="Conexão Cidadã" class="logo-img">
+  </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-links btn-outline">Voltar ao Início</a>
+    </div>
+  </nav>
+
+  <div class="inscricao-container">
+    
+    <div class="ong-info">
+      <div class="ong-logo-large">AA</div>
+      <h1>ActionAid</h1>
+      
+      <div class="ong-description-box">
+        Combate à pobreza e às desigualdades, com foco em justiça social e de gênero.
+      </div>
+      
+      <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--muted);">Localização:</p>
+      <a href="#" class="ong-location">
+        Saiba mais 📍
+      </a>
+    </div>
+
+    <div class="ong-form">
+      <h2>Dados necessários para Inscrição:</h2>
+      
+      <form id="form-inscricao">
+        <div class="input-group">
+          <input type="text" placeholder="Digite o seu nome:" required>
+        </div>
+        <div class="input-group">
+          <input type="tel" placeholder="Digite o seu telefone:" required>
+        </div>
+        <div class="input-group">
+          <input type="email" placeholder="Digite o seu email:" required>
+        </div>
+
+        <h3 class="section-title" style="color: var(--teal-mid); font-weight: 600; margin: 1.5rem 0 1rem;">Tipos de ajuda:</h3>
+        
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">Presencial:</p>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" name="horario1">
+            Segunda (10:00 até 19:00)
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="horario2">
+            Quarta (12:00 até 22:30)
+          </label>
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">Doações:</p>
+        <button type="button" class="btn-pix" onclick="alert('Chave PIX copiada!')">
+          Copiar chave-pix ⧉
+        </button>
+
+        <button type="submit" class="btn-finalizar">Finalizar</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    // Se o usuário acessar a página e não estiver logado, redireciona para o login
+    if (localStorage.getItem('conectado') !== 'sim') {
+      window.location.href = 'login.html';
+    }
+
+    // Ao enviar a inscrição, exibe sucesso e volta ao início
+    document.getElementById('form-inscricao').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Inscrição confirmada com sucesso! A ONG entrará em contato em breve.');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

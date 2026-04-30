@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Conexão Cidadã</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+      <img src="https://media.discordapp.net/attachments/785623564690259968/1493988202220879872/conexaocidadanobg.png?ex=69e0f870&is=69dfa6f0&hm=0b791dd927464cf101ebb1cff630a538ff5e6f431e7ca669d7d8e13f1de979b6&=&format=webp&quality=lossless" alt="Conexão Cidadã" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-links btn-outline">Início</a>
+      <a href="cadastro.html" class="nav-links btn-filled">Cadastrar</a>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>Bem-vindo de volta</h2>
+        <p>Acesse sua conta para continuar transformando vidas.</p>
+      </div>
+      
+      <form class="login-form" id="form-login">
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+        
+        <div class="input-group">
+          <div class="label-row">
+            <label for="password">Senha</label>
+            <a href="#" class="forgot-link">Esqueceu a senha?</a>
+          </div>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        
+        <button type="submit" class="btn-login">Entrar na conta</button>
+      </form>
+      
+      <div class="login-footer">
+        Não tem uma conta? <a href="cadastro.html">Cadastre-se gratuitamente</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('form-login').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      
+      const emailLogin = document.getElementById('email').value;
+      const senhaLogin = document.getElementById('password').value;
+      
+      // Busca as informações do cadastro
+      const emailSalvo = localStorage.getItem('emailUsuario');
+      const senhaSalva = localStorage.getItem('senhaUsuario');
+      
+      if (!emailSalvo) {
+        alert('Nenhuma conta encontrada. Por favor, cadastre-se primeiro.');
+        return;
+      }
+
+      if (emailLogin === emailSalvo && senhaLogin === senhaSalva) {
+        localStorage.setItem('conectado', 'sim');
+        window.location.href = 'index.html';
+      } else {
+        alert('E-mail ou senha incorretos. Tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>
